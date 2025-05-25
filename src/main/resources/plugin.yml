@@ -1,0 +1,10 @@
+name: GradzixBoundles
+version: '1.0-SNAPSHOT'
+main: com.xxgradzix.me.gradzixBoundles.GradzixBoundles
+api-version: '1.21'
+
+
+commands:
+  getbag:
+    description: Get a bag of items
+    permission: gradzixboundles.getbag
