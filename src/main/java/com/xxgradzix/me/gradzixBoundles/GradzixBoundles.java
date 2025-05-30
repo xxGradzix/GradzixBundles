@@ -6,10 +6,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GradzixBoundles extends JavaPlugin {
 
+    public static GradzixBoundles instance;
+
+    public static final BagManager bagManager = new BagManager();
+    private static final BagOpener bagOpener = new BagOpener();
+
+    public static GradzixBoundles getInstance() {
+        return instance;
+    }
+
     @Override
     public void onEnable() {
-        BagManager bagManager = new BagManager();
-        BagOpener bagOpener = new BagOpener();
 
         getServer().getPluginManager().registerEvents(new BagListener(bagManager, bagOpener), this);
 
